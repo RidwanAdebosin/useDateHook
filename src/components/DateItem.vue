@@ -1,7 +1,7 @@
 <template>
-  <h1>Date: {{ currentDate }}</h1>
-  <h1>Day: {{ day }}</h1>
-  <h1>Month: {{ month }}</h1>
+  <h2>Date: {{ currentDate }}</h2>
+  <h2>Day: {{ day }}</h2>
+  <h2>Month: {{ month }}</h2>
 
   <form @submit.prevent="AddDate">
     <div class="container">
@@ -36,7 +36,7 @@
         />
       </div>
 
-      <button>Get Day</button>
+      <button @keydown.enter="">Get Day</button>
     </div>
   </form>
 
@@ -103,9 +103,12 @@ form input {
   width: 70%;
   border-radius: 6px;
   border: none;
+  background-color: white;
+  color: #000;
 }
 
 form label {
+  color: #000;
   display: block;
   font-size: 20px;
   margin-block-end: 5px;
@@ -122,6 +125,7 @@ button {
 
 button:hover {
   font-weight: 700;
+  color: #000;
   background-color: transparent;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
   transition: all 300ms ease-in-out;
